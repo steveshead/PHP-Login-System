@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Make sure the user CAN be added AND is added
 
-    // Return the proper information back to JavaScrit to redirect us.
+    // Return the proper information back to Javascript to redirect us.
 
     $return['redirect'] = '/dashboard.php';
     $return['name'] = "Steve Shead";
