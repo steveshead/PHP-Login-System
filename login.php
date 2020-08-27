@@ -6,7 +6,7 @@
 	require_once "inc/config.php";
 	require_once "inc/header.php";
 
-	ForceDashboard();
+	Page::ForceDashboard();
 ?>
 
   	<div class="uk-section uk-container">
