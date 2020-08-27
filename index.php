@@ -10,13 +10,16 @@
 
   	<div class="uk-section uk-container">
   		<?php
-  			echo "Hello world. Today is: ";
-  			echo date("M d, Y");
+  			echo "<h3>Hello there! Today is: ";
+  			echo date("M d, Y") . "</h3>";
   		?>
-        <br>
   		<p>
-  			<a class="uk-button uk-button-default" href="/login.php">Login</a>
-  			<a class="uk-button uk-button-default" href="/register.php">Register</a>
+            <?php if(isset($_SESSION['user_id'])) : ?>
+                <a class="uk-button uk-button-default" href="/logout.php">Logout</a>
+            <?php else: ?>
+                <a class="uk-button uk-button-default" href="/login.php">Login</a>
+                <a class="uk-button uk-button-default" href="/register.php">Register</a>
+            <?php endif; ?>
   		</p>
   	</div>
 

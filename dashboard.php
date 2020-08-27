@@ -27,7 +27,7 @@
 ?>
 
   	<div class="uk-section uk-container">
-  		<h2>Hello <?php echo $User['email']; ?>.  You registered at <?php echo $User['reg_time']; ?></h2>
+  		<h3>Hello <?php echo $User['email']; ?>.  You registered at <?php echo $User['reg_time']; ?></h3>
         <a class="uk-button uk-button-default" href="logout.php">Logout</a>
   	</div>
 
