@@ -11,14 +11,13 @@
   	<div class="uk-section uk-container">
   		<?php
   			echo "Hello world. Today is: ";
-  			echo date("Y m d");
+  			echo date("M d, Y");
   		?>
+        <br>
   		<p>
-  			<a href="/login.php">Login</a>
-  			<a href="/register.php">Register</a>
+  			<a class="uk-button uk-button-default" href="/login.php">Login</a>
+  			<a class="uk-button uk-button-default" href="/register.php">Register</a>
   		</p>
   	</div>
 
   	<?php require_once "inc/footer.php"; ?>
-  </body>
-</html>
