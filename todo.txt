@@ -1,0 +1,10 @@
+News Feed
+Friend feed
+Change email
+Change password
+Reset password
+Invite friend
+Add first name
+Add last name
+Add email confirmation
+Add 2FA

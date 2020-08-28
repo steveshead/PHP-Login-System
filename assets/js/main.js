@@ -1,11 +1,12 @@
 $(document)
-.on("submit", "form.js-register, form.js-login", function(event) {
+.on("submit", "form.js-register", function(event) {
 	event.preventDefault();
 
 	var _form = $(this);
 	var _error = $(".js-error", _form);
 
 	var dataObj = {
+		username: $("input[name='username']", _form).val(),
 		email: $("input[type='email']", _form).val(),
 		password: $("input[type='password']", _form).val()
 	};
@@ -33,7 +34,7 @@ $(document)
 		async: true,
 	})
 	.done(function ajaxDone(data) {
-		// Whatever data is 
+		// Whatever data is
 		if(data.redirect !== undefined) {
 			window.location = data.redirect;
 		} else if(data.error !== undefined) {
@@ -43,16 +44,15 @@ $(document)
 		}
 	})
 	.fail(function ajaxFailed(e) {
-		// This failed 
+		// This failed
 	})
 	.always(function ajaxAlwaysDoThis(data) {
 		// Always do
 		console.log('Always');
 	})
-
 	return false;
 })
-// 
+
 .on("submit", "form.js-login", function(event) {
 	event.preventDefault();
 
@@ -87,7 +87,7 @@ $(document)
 		async: true,
 	})
 	.done(function ajaxDone(data) {
-		// Whatever data is 
+		// Whatever data is
 		if(data.redirect !== undefined) {
 			window.location = data.redirect;
 		} else if(data.error !== undefined) {
@@ -97,7 +97,7 @@ $(document)
 		}
 	})
 	.fail(function ajaxFailed(e) {
-		// This failed 
+		// This failed
 	})
 	.always(function ajaxAlwaysDoThis(data) {
 		// Always do

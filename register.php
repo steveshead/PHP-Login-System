@@ -11,22 +11,29 @@ include_once 'inc/header.php';
 
 
   	<div class="uk-section uk-container">
-  		<div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1" uk-grid>
+  		<div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1">
 			<form class="uk-form-stacked js-register">
 
 				<h2>Register</h2>
 
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Username</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" type="text" name="username" required='required' placeholder="Username">
+                    </div>
+                </div>
+
 			    <div class="uk-margin">
 			        <label class="uk-form-label" for="form-stacked-text">Email</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input" id="form-stacked-text" type="email" required='required' placeholder="email@email.com">
+			            <input class="uk-input" type="email" required='required' placeholder="email@email.com">
 			        </div>
 			    </div>
 
 			    <div class="uk-margin">
 			        <label class="uk-form-label" for="form-stacked-text">Passphrase</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input" id="form-stacked-text" type="password" required='required' placeholder="Your passphrase">
+			            <input class="uk-input" type="password" required='required' placeholder="Your passphrase">
 			        </div>
 			    </div>
 

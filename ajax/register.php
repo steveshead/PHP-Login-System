@@ -12,7 +12,8 @@
 
 		$return = [];
 
-		$email = Filter::String( $_POST['email'] );
+		$username = Filter::String( $_POST['username'] );
+		$email 	  = Filter::String( $_POST['email'] );
 
 		// Make sure the user does not exist.
 		$user_found = User::Find($email);
@@ -27,7 +28,8 @@
 
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-			$addUser = $con->prepare("INSERT INTO users(email, password) VALUES(LOWER(:email), :password)");
+			$addUser = $con->prepare("INSERT INTO users(username, email, password) VALUES(:username, LOWER(:email), :password)");
+			$addUser->bindParam(':username', $username, PDO::PARAM_STR);
 			$addUser->bindParam(':email', $email, PDO::PARAM_STR);
 			$addUser->bindParam(':password', $password, PDO::PARAM_STR);
 			$addUser->execute();
