@@ -12,14 +12,14 @@ include_once 'inc/header.php';
 
   	<div class="uk-section uk-container">
   		<div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1">
-			<form class="uk-form-stacked js-register">
+			<form class="uk-form-stacked js-register" method="post" action="ajax/register.php">
 
 				<h2>Register</h2>
 
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-stacked-text">Username</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" type="text" name="username" required='required' placeholder="Username">
+                        <input class="uk-input" type="text" name="username" id="username" required='required' placeholder="Username">
                     </div>
                 </div>
 

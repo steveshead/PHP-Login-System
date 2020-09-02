@@ -12,7 +12,7 @@
 
 		$return = [];
 
-		$username = Filter::String( $_POST['username'] );
+		$username = $_POST['username'];
 		$email 	  = Filter::String( $_POST['email'] );
 
 		// Make sure the user does not exist.

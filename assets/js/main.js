@@ -1,11 +1,12 @@
 $(document)
-	.on("submit", "form.js-register, form.js-login", function(event) {
+	.on("submit", "form.js-register", function(event) {
 		event.preventDefault();
 
 		var _form = $(this);
 		var _error = $(".js-error", _form);
 
 		var dataObj = {
+			username: $("input[name='username']", _form).val(),
 			email: $("input[type='email']", _form).val(),
 			password: $("input[type='password']", _form).val()
 		};
@@ -52,7 +53,7 @@ $(document)
 
 		return false;
 	})
-	//
+	// Login form
 	.on("submit", "form.js-login", function(event) {
 		event.preventDefault();
 
@@ -60,7 +61,6 @@ $(document)
 		var _error = $(".js-error", _form);
 
 		var dataObj = {
-			username: $("input[name='username']", _form).val(),
 			email: $("input[type='email']", _form).val(),
 			password: $("input[type='password']", _form).val()
 		};
