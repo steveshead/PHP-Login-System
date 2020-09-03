@@ -6,6 +6,8 @@ $(document)
 		var _error = $(".js-error", _form);
 
 		var dataObj = {
+			firstname: $("input[name='firstname']", _form).val(),
+			lastname: $("input[name='lastname']", _form).val(),
 			username: $("input[name='username']", _form).val(),
 			email: $("input[type='email']", _form).val(),
 			password: $("input[type='password']", _form).val()
@@ -50,7 +52,6 @@ $(document)
 				// Always do
 				console.log('Always');
 			})
-
 		return false;
 	})
 	// Login form
@@ -104,6 +105,5 @@ $(document)
 				// Always do
 				console.log('Always');
 			})
-
 		return false;
 	})

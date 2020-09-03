@@ -11,7 +11,7 @@
   	<div class="uk-section uk-container">
   		<?php
   			echo "<h3>Hello there! Today is: ";
-  			echo date("M d, Y") . "</h3>";
+  			echo date("l jS \of F, Y") . "</h3>";
   		?>
   		<p>
             <?php if(isset($_SESSION['user_id'])) : ?>

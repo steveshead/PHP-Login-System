@@ -12,8 +12,10 @@
 
 		$return = [];
 
-		$username = $_POST['username'];
-		$email 	  = Filter::String( $_POST['email'] );
+		$firstname = $_POST['firstname'];
+		$lastname  = $_POST['lastname'];
+		$username  = $_POST['username'];
+		$email 	   = Filter::String( $_POST['email'] );
 
 		// Make sure the user does not exist.
 		$user_found = User::Find($email);
@@ -28,7 +30,9 @@
 
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-			$addUser = $con->prepare("INSERT INTO users(username, email, password) VALUES(:username, LOWER(:email), :password)");
+			$addUser = $con->prepare("INSERT INTO users(firstname, lastname, username, email, password) VALUES(:firstname, :lastname, :username, LOWER(:email), :password)");
+			$addUser->bindParam(':firstname', $firstname, PDO::PARAM_STR);
+			$addUser->bindParam(':lastname', $lastname, PDO::PARAM_STR);
 			$addUser->bindParam(':username', $username, PDO::PARAM_STR);
 			$addUser->bindParam(':email', $email, PDO::PARAM_STR);
 			$addUser->bindParam(':password', $password, PDO::PARAM_STR);
@@ -37,6 +41,7 @@
 			$user_id = $con->lastInsertId();
 
 			$_SESSION['user_id'] = (int) $user_id;
+			$_SESSION['firstname'] = $firstname;
 
 			$return['redirect'] = '/dashboard.php?message=welcome';
 			$return['is_logged_in'] = true;

@@ -13,8 +13,8 @@
 ?>
 
   	<div class="uk-section uk-container">
-  		<h3 style="margin-bottom:0 !important">Hello and welcome <?php echo $User->email; ?>.</h3>
-			<h5 style="margin-top:5px">You registered on <?php echo date('l jS \of F Y h:i:s A', strtotime($User->reg_time)); ?></h5>
+  		<h3 style="margin-bottom:0 !important">Hello and welcome <?php echo $User->username; ?>.</h3>
+			<h5 style="margin-top:5px">You registered on <?php echo date('l jS \of F Y h:i A', strtotime($User->reg_time)); ?></h5>
         <a class="uk-button uk-button-default" href="logout.php">Logout</a>
   	</div>
 
