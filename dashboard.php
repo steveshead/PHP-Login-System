@@ -10,6 +10,10 @@
 
 	$User = new User($_SESSION['user_id']);
 
+$stmt = $con->prepare("SELECT * FROM users");
+$stmt->execute();
+$user = $stmt->fetch(PDO::FETCH_OBJ);
+
 ?>
 
   	<div class="uk-section uk-container">
