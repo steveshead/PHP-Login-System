@@ -9,6 +9,8 @@ class User {
 
 	private $con;
 
+	public $firstname;
+	public $lastname;
 	public $username;
 	public $user_id;
 	public $email;
@@ -18,13 +20,15 @@ class User {
 		$this->con = DB::getConnection();
 		$this->con;
 
-		$user = $this->con->prepare("SELECT username, user_id, email, reg_time FROM users WHERE user_id = :user_id LIMIT 1");
+		$user = $this->con->prepare("SELECT firstname, lastname, username, user_id, email, reg_time FROM users WHERE user_id = :user_id LIMIT 1");
 		$user->bindParam(':user_id', $user_id, PDO::PARAM_INT);
 		$user->execute();
 
 		if($user->rowCount() == 1) {
 			$user = $user->fetch(PDO::FETCH_OBJ);
 
+			$this->firstname = (string) $user->firstname;
+			$this->lastname = (string) $user->lastname;
 			$this->username = (string) $user->username;
 			$this->email 	= (string) $user->email;
 			$this->user_id  = (int) $user->user_id;
@@ -41,7 +45,7 @@ class User {
 		$con = DB::getConnection();
 		$email = (string) Filter::String($email);
 		// Make sure the user does not exist.
-		$findUser = $con->prepare("SELECT username, user_id, password FROM users WHERE email = LOWER(:email) LIMIT 1");
+		$findUser = $con->prepare("SELECT firstname, lastname, username, user_id, password FROM users WHERE email = LOWER(:email) LIMIT 1");
 		$findUser->bindParam(':email', $email, PDO::PARAM_STR);
 		$findUser->execute();
 

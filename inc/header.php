@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="follow">
+    <style>
+        html, body {height:100%;}
+        #page-footer, #page-wrapper:after { height: 60px; }
+        #page-footer { background-color: #f5f5f5; }
+        #page-wrapper { min-height: calc(100% - 100px); margin-bottom: -60px; }
+        #page-wrapper:after { content: ""; display: block; }
+
+    </style>
 
     <title>Page Title</title>
 
@@ -29,3 +37,4 @@
 </nav>
 
 <body>
+    <div id="page-wrapper">
