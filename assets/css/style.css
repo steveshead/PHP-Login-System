@@ -1,0 +1,5 @@
+html, body {height:100%;}
+#page-footer, #page-wrapper:after { height: 60px; }
+#page-footer { background-color: #f5f5f5; }
+#page-wrapper { min-height: calc(100% - 100px); margin-bottom: -60px !important; }
+#page-wrapper:after { content: ""; display: block; }
