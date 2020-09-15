@@ -8,19 +8,24 @@
 
 ?>
 
-  	<div class="uk-section uk-container">
-  		<?php
-  			echo "<h3>Hello there! Today is: ";
-  			echo date("l jS \of F, Y") . "</h3>";
-  		?>
-  		<p>
-            <?php if(isset($_SESSION['user_id'])) : ?>
-                <a class="uk-button uk-button-default" href="/logout.php">Logout</a>
-            <?php else: ?>
-                <a class="uk-button uk-button-default" href="/login.php">Login</a>
-                <a class="uk-button uk-button-default" href="/register.php">Register</a>
-            <?php endif; ?>
-  		</p>
-  	</div>
+  	<div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <?php
+                echo "<h3>Hello there! Today is: ";
+                echo date("l jS \of F, Y") . "</h3>";
+                ?>
+                <p class="mt-3">
+                    <?php if(isset($_SESSION['user_id'])) : ?>
+                        <a class="btn btn-lg btn-outline-secondary" href="bootstrap/logout.php">Logout</a>
+                    <?php else: ?>
+                        <a class="btn btn-lg btn-outline-secondary" href="bootstrap/login.php">Login</a>
+                        <a class="btn btn-lg btn-outline-secondary" href="bootstrap/register.php">Register</a>
+                    <?php endif; ?>
+                </p>
+            </div>
+        </div>
+    </div>
+
 
   	<?php require_once "inc/footer.php"; ?>

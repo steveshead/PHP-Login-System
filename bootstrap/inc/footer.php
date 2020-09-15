@@ -1,9 +1,12 @@
-</div>
-    <footer id="page-footer" class="uk-margin-top" uk-sticky>
-        <div class="uk-padding-small uk-padding-remove-bottom">
-            <p class="uk-text-small" style="margin-top:5px;">Copyright &copy; Your Company.
-                <span class="uk-text-small uk-align-right">Logged in as:  <?php // echo $User->firstname ." ". $User->lastname; ?></span>
-            </p>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="small" style="margin-top:5px;">Copyright &copy; Your Company.
+                    <span class="float-right">Logged in as:  <?php // echo $User->firstname ." ". $User->lastname; ?></span>
+                </span>
+            </div>
+        </div>
         </div>
     </footer><!--/footer#page-footer-->
 

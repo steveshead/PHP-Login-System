@@ -16,7 +16,7 @@
 
 <nav class="uk-navbar-container uk-navbar-secondary" uk-navbar>
     <div class="uk-navbar-left">
-        <a href="index.php" class="uk-navbar-item uk-logo">PHP CODE</a>
+        <a href="index.php" class="uk-navbar-item uk-logo">PHP LOGIN</a>
         <ul class="uk-navbar-nav">
             <li class="uk-parent"><a href="login.php">Login</a></li>
             <li class="uk-parent"><a href="register.php">Register</a></li>

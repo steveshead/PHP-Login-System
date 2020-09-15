@@ -10,54 +10,47 @@ include_once 'inc/header.php';
 ?>
 
 
-  	<div class="uk-section uk-container">
-  		<div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1">
-			<form class="uk-form-stacked js-register" method="post" action="ajax/register.php">
+  	<div class="container mt-5">
+  		<div class="row">
+            <div class="col-md-6">
+                <form class="uk-form-stacked js-register" method="post" action="ajax/register.php">
 
-				<h2>Register</h2>
+                    <h2>Register</h2>
 
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="form-stacked-text">First Name</label>
-                    <div class="uk-form-controls">
-                        <input class="uk-input" type="text" name="firstname" id="firstname" required='required' placeholder="First Name">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input class="form-control" type="text" name="firstname" id="firstname" required='required' placeholder="First Name">
                     </div>
-                </div>
 
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="form-stacked-text">Last Name</label>
-                    <div class="uk-form-controls">
-                        <input class="uk-input" type="text" name="lastname" id="lastname" required='required' placeholder="Last Name">
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                            <input class="form-control" type="text" name="lastname" id="lastname" required='required' placeholder="Last Name">
                     </div>
-                </div>
 
-                <div class="uk-margin">
-                    <label class="uk-form-label" for="form-stacked-text">Username</label>
-                    <div class="uk-form-controls">
-                        <input class="uk-input" type="text" name="username" id="username" required='required' placeholder="Username">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                            <input class="form-control" type="text" name="username" id="username" required='required' placeholder="Username">
                     </div>
-                </div>
 
-			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">Email</label>
-			        <div class="uk-form-controls">
-			            <input class="uk-input" type="email" required='required' placeholder="email@email.com">
-			        </div>
-			    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                            <input class="form-control" type="email" required='required' placeholder="email@email.com">
+                    </div>
 
-			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">Passphrase</label>
-			        <div class="uk-form-controls">
-			            <input class="uk-input" type="password" required='required' placeholder="Your passphrase">
-			        </div>
-			    </div>
+                    <div class="form-group">
+                        <label for="password">Passphrase</label>
+                            <input class="form-control" type="password" required='required' placeholder="Your passphrase">
+                    </div>
 
-			    <div class="uk-margin uk-alert uk-alert-danger js-error" style='display: none;'></div>
+                    <div class="alert alert-danger js-error" style='display: none;'></div>
 
-			    <div class="uk-margin">
-			        <button class="uk-button uk-button-default" type="submit">Register</button>
-			    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-outline-secondary" type="submit">Register</button>
+                    </div>
 
-			</form>
+                </form>
+            </div>
+
   		</div>
   	</div>
 
