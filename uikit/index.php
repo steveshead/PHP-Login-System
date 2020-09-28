@@ -14,7 +14,7 @@
   			echo date("l jS \of F, Y") . "</h3>";
   		?>
   		<p>
-            <?php if(isset($_SESSION['user_id'])) : ?>
+            <?php if(isLoggedIn()) : ?>
                 <a class="uk-button uk-button-default" href="/uikit/logout.php">Logout</a>
             <?php else: ?>
                 <a class="uk-button uk-button-default" href="/uikit/login.php">Login</a>

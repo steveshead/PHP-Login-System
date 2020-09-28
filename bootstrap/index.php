@@ -16,7 +16,7 @@
                 echo date("l jS \of F, Y") . "</h3>";
                 ?>
                 <p class="mt-3">
-                    <?php if(isset($_SESSION['user_id'])) : ?>
+                    <?php if(isLoggedIn()) : ?>
                         <a class="btn btn-lg btn-outline-secondary" href="/bootstrap/logout.php">Logout</a>
                     <?php else: ?>
                         <a class="btn btn-lg btn-outline-secondary" href="/bootstrap/login.php">Login</a>

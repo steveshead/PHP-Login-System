@@ -22,7 +22,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <?php if (isLoggedIn()) : ?>
+            <?php if (isset($_SESSION['user_id'])) : ?>
             <li class="nav-item">
                 <a class="nav-link" href="/bootstrap/dashboard.php">Dashboard</a>
             </li>
@@ -36,7 +36,7 @@
             <?php endif; ?>
         </ul>
 
-        <?php if(isLoggedIn()) : ?>
+        <?php if (isset($_SESSION['user_id'])) : ?>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="/bootstrap/logout.php">Logout</a>
