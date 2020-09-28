@@ -36,7 +36,7 @@ class User {
 
 		} else {
 			// Redirect to logout
-			header('Location: /logout.php');
+			header('Location: /uikit/logout.php');
 			exit;
 		}
 	}

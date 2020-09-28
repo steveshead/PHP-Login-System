@@ -6,9 +6,7 @@ if(!defined('__CONFIG__')) {
 }
 
 class DB {
-
 	protected static $con;
-
 	private function __construct() {
 
 		try {
@@ -21,13 +19,10 @@ class DB {
 		}
 	}
 
-
 	public static function getConnection() {
-
 		if (!self::$con) {
 			new DB();
 		}
-
 		return self::$con;
 	}
 }

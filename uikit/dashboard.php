@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <a class="uk-button uk-button-default uk-margin" href="logout.php">Logout</a>
+        <a class="uk-button uk-button-default uk-margin" href="/uikit/logout.php">Logout</a>
   	</div>
 
   	<?php require_once "inc/footer.php"; ?>

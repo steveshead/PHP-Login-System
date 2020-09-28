@@ -30,7 +30,7 @@ $(document)
 
 		$.ajax({
 			type: 'POST',
-			url: '/ajax/register.php',
+			url: '/bootstrap/ajax/register.php',
 			data: dataObj,
 			dataType: 'json',
 			async: true,
@@ -83,7 +83,7 @@ $(document)
 
 		$.ajax({
 			type: 'POST',
-			url: '/ajax/login.php',
+			url: '/bootstrap/ajax/login.php',
 			data: dataObj,
 			dataType: 'json',
 			async: true,

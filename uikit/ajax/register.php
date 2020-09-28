@@ -43,7 +43,7 @@
 			$_SESSION['user_id'] = (int) $user_id;
 			$_SESSION['firstname'] = $firstname;
 
-			$return['redirect'] = '/dashboard.php?message=welcome';
+			$return['redirect'] = '/uikit/dashboard.php?message=welcome';
 			$return['is_logged_in'] = true;
 		}
 

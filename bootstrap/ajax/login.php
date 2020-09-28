@@ -26,7 +26,7 @@
 
 			if(password_verify($password, $hash)) {
 				// User is signed in
-				$return['redirect'] = 'bootstrap/dashboard.php';
+				$return['redirect'] = '/bootstrap/dashboard.php';
 
 				$_SESSION['user_id'] = $user_id;
 			} else {
@@ -36,7 +36,7 @@
 
 		} else {
 			// They need to create a new account
-			$return['error'] = "You do not have an account. <a href='bootstrap/register.php'>Create one now?</a>";
+			$return['error'] = "You do not have an account. <a href='/bootstrap/register.php'>Create one now?</a>";
 		}
 
 		echo json_encode($return, JSON_PRETTY_PRINT); exit;

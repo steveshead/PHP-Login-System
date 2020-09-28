@@ -13,7 +13,7 @@ class Page {
 			// The user is allowed here
 		} else {
 			// The user is not allowed here.
-			header("Location: login.php");
+			header("Location: /bootstrap/login.php");
 			exit;
 		}
 	}
@@ -21,7 +21,7 @@ class Page {
 	static function ForceDashboard() {
 		if (isset($_SESSION['user_id'])) {
 			// The user is allowed here but redirect anyway
-			header("Location: dashboard.php");
+			header("Location: /bootstrap/dashboard.php");
 			exit;
 		} else {
 			// The user is not allowed here.

@@ -17,10 +17,10 @@
                 ?>
                 <p class="mt-3">
                     <?php if(isset($_SESSION['user_id'])) : ?>
-                        <a class="btn btn-lg btn-outline-secondary" href="bootstrap/logout.php">Logout</a>
+                        <a class="btn btn-lg btn-outline-secondary" href="/bootstrap/logout.php">Logout</a>
                     <?php else: ?>
-                        <a class="btn btn-lg btn-outline-secondary" href="bootstrap/login.php">Login</a>
-                        <a class="btn btn-lg btn-outline-secondary" href="bootstrap/register.php">Register</a>
+                        <a class="btn btn-lg btn-outline-secondary" href="/bootstrap/login.php">Login</a>
+                        <a class="btn btn-lg btn-outline-secondary" href="/bootstrap/register.php">Register</a>
                     <?php endif; ?>
                 </p>
             </div>

@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <a class="btn btn-outline-secondary" href="bootstrap/logout.php">Logout</a>
+        <a class="btn btn-outline-secondary" href="/bootstrap/logout.php">Logout</a>
   	</div>
 
   	<?php require_once "inc/footer.php"; ?>
