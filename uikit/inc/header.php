@@ -18,16 +18,23 @@
     <div class="uk-navbar-left">
         <a href="index.php" class="uk-navbar-item uk-logo">PHP LOGIN</a>
         <ul class="uk-navbar-nav">
-            <li class="uk-parent"><a href="/uikit/login.php">Login</a></li>
-            <li class="uk-parent"><a href="/uikit/register.php">Register</a></li>
-            <li class="uk-parent"><a href="/uikit/dashboard.php">Dashboard</a></li>
+            <?php if(isLoggedIn()) : ?>
+                <li class="uk-parent"><a href="/uikit/dashboard.php">Dashboard</a></li>
+            <?php else: ?>
+                <li class="uk-parent"><a href="/uikit/login.php">Login</a></li>
+                <li class="uk-parent"><a href="/uikit/register.php">Register</a></li>
+            <?php endif; ?>
         </ul>
     </div>
-    <div class="uk-navbar-right">
-        <ul class="uk-navbar-nav">
-            <li class="uk-parent"><a href="/uikit/logout.php">Logout</a></li>
-        </ul>
-    </div>
+
+    <?php if(isLoggedIn()) : ?>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                    <li class="uk-parent"><a href="/uikit/logout.php">Logout</a></li>
+            </ul>
+        </div>
+    <?php endif; ?>
+
 </nav>
 
 <body>

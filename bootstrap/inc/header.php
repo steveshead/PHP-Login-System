@@ -22,21 +22,27 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+            <?php if (isLoggedIn()) : ?>
+            <li class="nav-item">
+                <a class="nav-link" href="/bootstrap/dashboard.php">Dashboard</a>
+            </li>
+            <?php else: ?>
             <li class="nav-item">
                 <a class="nav-link" href="/bootstrap/login.php">Login</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/bootstrap/register.php">Register</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/bootstrap/dashboard.php">Dashboard</a>
-            </li>
+            <?php endif; ?>
         </ul>
+
+        <?php if(isLoggedIn()) : ?>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="/bootstrap/logout.php">Logout</a>
             </li>
         </ul>
+        <?php endif; ?>
     </div>
 </nav>
 
