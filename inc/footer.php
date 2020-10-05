@@ -1,5 +1,5 @@
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
 
@@ -11,8 +11,8 @@
                 <?php endif; ?>
             </div>
         </div>
-        </div>
-    </footer><!--/footer#page-footer-->
+    </div>
+</footer><!--/footer#page-footer-->
 
 <!-- jQuery is required -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

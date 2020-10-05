@@ -18,6 +18,7 @@
     <div class="uk-navbar-left">
         <a href="index.php" class="uk-navbar-item uk-logo">PHP LOGIN</a>
         <ul class="uk-navbar-nav">
+            <li class="uk-parent"><a href="/">Home</a></li>
             <?php if (isset($_SESSION['user_id'])) : ?>
                 <li class="uk-parent"><a href="/uikit/dashboard.php">Dashboard</a></li>
             <?php else: ?>
@@ -30,7 +31,7 @@
     <?php if (isset($_SESSION['user_id'])) : ?>
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
-                    <li class="uk-parent"><a href="/uikit/logout.php">Logout</a></li>
+                    <li class="uk-parent"><a uk-icon="icon: sign-out" href="/uikit/logout.php">Logout</a></li>
             </ul>
         </div>
     <?php endif; ?>

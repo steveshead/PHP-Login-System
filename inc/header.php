@@ -26,25 +26,25 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <?php if (isset($_SESSION['user_id'])) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/bootstrap/dashboard.php">Dashboard</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bootstrap/dashboard.php">Dashboard</a>
+                </li>
             <?php else: ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/bootstrap/login.php">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/bootstrap/register.php">Register</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bootstrap/login.php">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bootstrap/register.php">Register</a>
+                </li>
             <?php endif; ?>
         </ul>
 
         <?php if (isset($_SESSION['user_id'])) : ?>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/bootstrap/logout.php">Logout</a>
-            </li>
-        </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/bootstrap/logout.php">Logout</a>
+                </li>
+            </ul>
         <?php endif; ?>
     </div>
 </nav>

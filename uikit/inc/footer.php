@@ -1,7 +1,12 @@
 </div>
     <footer id="page-footer" class="uk-margin-top" uk-sticky>
         <div class="uk-padding-small uk-padding-remove-bottom">
-            <p class="uk-text-small uk-text-center" style="margin-top:5px;">Copyright &copy; Your Company.</p>
+            <?php if(isset($_SESSION['user_id'])) : ?>
+                <span class="uk-text-small uk-text-left" style="margin-top:5px;">Copyright &copy; Your Company.</span>
+                <span class="uk-text-small uk-align-right">Logged in as:  <?php echo $_SESSION['username']; ?></span>
+            <?php else: ?>
+                <p class="uk-text-small uk-text-center" style="margin-top:5px;">Copyright &copy; Your Company.</p>
+            <?php endif; ?>
         </div>
     </footer><!--/footer#page-footer-->
 

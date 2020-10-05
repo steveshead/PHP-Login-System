@@ -22,6 +22,7 @@
 			// User exists, try and sign them in
 
 			$user_id = (int) $user_found['user_id'];
+			$username = (string) $user_found['username'];
 			$hash = (string) $user_found['password'];
 
 			if(password_verify($password, $hash)) {
@@ -29,6 +30,7 @@
 				$return['redirect'] = '/uikit/dashboard.php';
 
 				$_SESSION['user_id'] = $user_id;
+				$_SESSION['username'] = $username;
 			} else {
 				// Invalid user email/password combo
 				$return['error'] = "Invalid user email/password combo";
